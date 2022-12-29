@@ -4,14 +4,14 @@ function currentTime() {
   let hh = date.getHours();
   let mm = date.getMinutes();
   let ss = date.getSeconds();
-  let session = "AM";
+  let session = "PM";
 
   if (date === 0) {
     hh = 12;
   }
   if (date > 12) {
     hh - 12;
-    session = "PM";
+    session = "AM";
   }
 
   hh = hh < 10 ? "0" + hh : hh;
@@ -30,5 +30,23 @@ currentTime();
 // message section
 function message() {
   let date = new Date();
-  
+  let hh = date.getHours();
+  let msg;
+
+  if (hh < 12) {
+    msg = "Good Morning";
+  } else if (hh <= 16) {
+    msg = "Good Afternoon";
+  } else if (hh < 19) {
+    msg = "Good Evening";
+  } else if (hh >= 19) {
+    msg = "Good Night";
+  }
+
+  document.getElementById("main-message").innerText = msg;
+  let m = setTimeout(function () {
+    message();
+  }, 1000);
 }
+
+message();

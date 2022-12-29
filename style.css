@@ -54,7 +54,7 @@ a {
   margin-top: 9rem;
 }
 
-.main-message {
+#main-message {
   font-size: 5rem;
   font-weight: 700;
   text-transform: uppercase;
