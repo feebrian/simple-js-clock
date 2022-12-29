@@ -51,11 +51,12 @@ a {
 .message {
   display: flex;
   justify-content: center;
-  margin-top: 5rem;
+  margin-top: 9rem;
 }
 
 .main-message {
-  font-size: 3rem;
+  font-size: 5rem;
+  font-weight: 700;
   text-transform: uppercase;
 }
 

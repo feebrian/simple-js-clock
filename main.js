@@ -1,3 +1,4 @@
+// time section
 function currentTime() {
   let date = new Date();
   let hh = date.getHours();
@@ -5,7 +6,7 @@ function currentTime() {
   let ss = date.getSeconds();
   let session = "AM";
 
-  if (date == 0) {
+  if (date === 0) {
     hh = 12;
   }
   if (date > 12) {
@@ -17,10 +18,17 @@ function currentTime() {
   mm = mm < 10 ? "0" + mm : mm;
   ss = ss < 10 ? "0" + ss : ss;
 
-  let time = hh + ":" + mm + ":" + ss + session;
-  document.getElementById('main-clock').innerText = time;
+  let time = hh + " : " + mm;
+  document.getElementById("main-clock").innerText = time + " " + session;
   let t = setTimeout(function () {
     currentTime();
   }, 1000);
 }
+
 currentTime();
+
+// message section
+function message() {
+  let date = new Date();
+  
+}
